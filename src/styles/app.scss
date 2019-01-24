@@ -36,17 +36,32 @@ code {
   color: white;
 
   .page {
-    // margin-top: 60px;
-    // margin-bottom: 70px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     flex: 1;
-    // border: 1px solid white;
-    // padding-bottom: 30px;
     overflow: hidden;
   }
+}
+
+.title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.main-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.topic {
+  color: rgb(85,164,213);
+}
+
+.topic-list {
+  display: flex;
+  flex-direction: column;
 }
 
 .app-logo {

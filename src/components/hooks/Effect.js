@@ -4,20 +4,29 @@ class NormalClass extends Component { // eslint-disable-line
   state = {
     count: 0,
   }
+
   componentDidMount() {
     const { count } = this.state;
     document.title = `You clicked ${count} times (Normal Class)`;
   }
+
   componentDidUpdate() {
     const { count } = this.state;
     document.title = `You clicked ${count} times (Normal Class)`;
   }
+
   render() {
     const { count } = this.state;
     return (
       <div className="card">
         <h1>Normal Class</h1>
-        <p>You clicked {count} times</p>
+        <p>
+          You clicked
+          {' '}
+          {count}
+          {' '}
+          times
+        </p>
         <div role="button" className="app-button" onClick={() => this.setState({ count: count + 1 })}>
           Click me
         </div>
@@ -38,7 +47,13 @@ const Hook = () => {
   return (
     <div className="card">
       <h1>Effect Hook</h1>
-      <p>You clicked {count} times</p>
+      <p>
+You clicked
+        {' '}
+        {count}
+        {' '}
+times
+      </p>
       <div role="button" className="app-button" onClick={() => setCount(count + 1)}>
         Click me
       </div>
@@ -52,22 +67,30 @@ class NormalClassWithCleanUp extends Component { // eslint-disable-line
   state = {
     width: window.innerWidth,
   }
+
   componentDidMount() {
     window.addEventListener('resize', this.handleWindowResize);
   }
+
   componentWillUnmount() {
     window.removeEventListener('resize', this.handleWindowResize);
   }
+
   handleWindowResize = (event) => {
     this.setState({ width: event.currentTarget.innerWidth });
   };
+
   render() {
     const { width } = this.state;
     return (
       <div className="card">
         <h1>Normal Class</h1>
         <h3>(With Clean Up)</h3>
-        <p>Current Window Width: {width}</p>
+        <p>
+Current Window Width:
+          {' '}
+          {width}
+        </p>
       </div>
     );
   }
@@ -91,7 +114,11 @@ const HookWithCleanUp = () => {
     <div className="card">
       <h1>Effect Hook</h1>
       <h3>(With Clean Up)</h3>
-      <p>Current Window Width: {width}</p>
+      <p>
+Current Window Width:
+        {' '}
+        {width}
+      </p>
     </div>
   );
 };

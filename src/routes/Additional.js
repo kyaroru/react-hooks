@@ -5,7 +5,7 @@ import FooterNavBar from '../components/FooterNavBar';
 const Additional = () => (
   <div className="app-content">
     <div className="page">
-      <div className="topic">Additional Hooks</div>
+      <div className="title topic">Additional Hooks</div>
       <div className="paragraph">
         <p>useReducer()</p>
         <p>useCallback()</p>
@@ -24,4 +24,3 @@ const Additional = () => (
 );
 
 export default Additional;
-

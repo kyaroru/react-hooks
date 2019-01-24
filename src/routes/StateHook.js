@@ -48,25 +48,28 @@ const StateHook = () => {
   return (
     <div className="app-content">
       <div className="page">
+        <div className="title topic">State Hook</div>
         <div className="row">
           <State.Hook onPress={() => setSelected('hook')} />
           <State.NormalClass onPress={() => setSelected('normal')} />
         </div>
-        {selected === 'hook' &&
-          <div className="card highlight">
-            {/* <CodeMirror value={hook} options={options} /> */}
-            <Highlight language="javascript">
-              {hook}
-            </Highlight>
-          </div>
+        {selected === 'hook'
+          && (
+            <div className="card highlight">
+              <Highlight language="javascript">
+                {hook}
+              </Highlight>
+            </div>
+          )
         }
-        {selected === 'normal' &&
-          <div className="card highlight">
-            {/* <CodeMirror value={normal} options={options} /> */}
-            <Highlight language="javascript">
-              {normal}
-            </Highlight>
-          </div>
+        {selected === 'normal'
+          && (
+            <div className="card highlight">
+              <Highlight language="javascript">
+                {normal}
+              </Highlight>
+            </div>
+          )
         }
       </div>
 
@@ -79,4 +82,3 @@ const StateHook = () => {
 };
 
 export default StateHook;
-

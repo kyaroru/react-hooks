@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../styles/topic.scss';
 
 const Topic = () => (
   <div className="app-content">
     <div className="page">
+      <div className="title topic">Table of Content</div>
       <div className="topic-list">
         <Link className="app-link" to="/what" href="/what">What is Hooks?</Link>
         <Link className="app-link" to="/why" href="/why">Why Hooks?</Link>
@@ -22,4 +22,3 @@ const Topic = () => (
 );
 
 export default Topic;
-

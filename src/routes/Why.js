@@ -5,7 +5,7 @@ import FooterNavBar from '../components/FooterNavBar';
 const Why = () => (
   <div className="app-content">
     <div className="page">
-      Why use Hooks
+      <div className="title topic">Why Hooks?</div>
     </div>
     <div className="back-button">
       <Link className="app-link" to="/topic" href="/topic">⬅ Back to Topic</Link>
@@ -15,4 +15,3 @@ const Why = () => (
 );
 
 export default Why;
-

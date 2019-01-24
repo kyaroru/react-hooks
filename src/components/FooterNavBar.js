@@ -4,15 +4,19 @@ import { Link } from 'react-router-dom';
 
 const FooterNavBar = ({ prev, next }) => (
   <div className="footer">
-    {prev &&
-      <div className="prev-button">
-        <Link className="app-link" to={prev}>Previous</Link>
-      </div>
+    {prev
+      && (
+        <div className="prev-button">
+          <Link className="app-link" to={prev}>Previous</Link>
+        </div>
+      )
     }
-    {next &&
-      <div className="next-button">
-        <Link className="app-link" to={next}>Next</Link>
-      </div>
+    {next
+      && (
+        <div className="next-button">
+          <Link className="app-link" to={next}>Next</Link>
+        </div>
+      )
     }
   </div>
 );

@@ -5,7 +5,7 @@ import FooterNavBar from '../components/FooterNavBar';
 const BYOH = () => (
   <div className="app-content">
     <div className="page">
-      Build your own Hooks
+      <div className="title topic">Build your own Hooks</div>
     </div>
     <div className="back-button">
       <Link className="app-link" to="/topic" href="/topic">⬅ Back to Topic</Link>
@@ -15,4 +15,3 @@ const BYOH = () => (
 );
 
 export default BYOH;
-

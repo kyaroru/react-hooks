@@ -6,6 +6,7 @@ import FooterNavBar from '../components/FooterNavBar';
 const EffectHook = () => (
   <div className="app-content">
     <div className="page">
+      <div className="title topic">Effect Hook</div>
       <div className="row">
         <Effect.Hook />
         <Effect.NormalClass />
@@ -23,4 +24,3 @@ const EffectHook = () => (
 );
 
 export default EffectHook;
-
