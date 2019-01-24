@@ -6,6 +6,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #282c34;
 }
 
 hr {
@@ -28,7 +29,6 @@ code {
 }
 
 .app-content {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -170,4 +170,9 @@ code {
     bottom: 30px;
     right: 20px;
   }
+}
+
+.copyright {
+  color: #fdfd96;
+  padding-bottom: 30px;
 }

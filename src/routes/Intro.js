@@ -15,6 +15,13 @@ const Intro = () => (
       <div className="title">I am Brownie :p</div>
       <Link className="app-link" to="/topic" href="/topic">Start Now !</Link>
     </div>
+    <div className="copyright">
+      ©
+      {' '}
+      {new Date().getFullYear()}
+      {' '}
+      Chiew Carol
+    </div>
   </div>
 );
 
