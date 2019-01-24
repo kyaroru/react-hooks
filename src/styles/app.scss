@@ -49,11 +49,25 @@ code {
 .title {
   font-size: 1.5rem;
   margin-bottom: 1rem;
+  a {
+    text-decoration: none;
+  }
+}
+
+.title-small {
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+  a {
+    text-decoration: none;
+  }
 }
 
 .main-title {
   font-size: 2rem;
   margin-bottom: 1rem;
+  a {
+    text-decoration: none;
+  }
 }
 
 .topic {
@@ -173,6 +187,7 @@ code {
 }
 
 .copyright {
-  color: #fdfd96;
+  color: white;
   padding-bottom: 30px;
+  font-size: 0.8rem;
 }

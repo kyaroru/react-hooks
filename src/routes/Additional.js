@@ -5,15 +5,48 @@ import FooterNavBar from '../components/FooterNavBar';
 const Additional = () => (
   <div className="app-content">
     <div className="page">
-      <div className="title topic">Additional Hooks</div>
+      <div className="title"><a className="topic" href="https://reactjs.org/docs/hooks-reference.html#additional-hooks">Additional Hooks</a></div>
       <div className="paragraph">
-        <p>useReducer()</p>
-        <p>useCallback()</p>
-        <p>useMemo()</p>
-        <p>useRef()</p>
-        <p>useImperativeHandle()</p>
-        <p>useLayoutEffect()</p>
-        <p>useDebugValue()</p>
+        <p>
+          useContext() -
+          {' '}
+          <a className="highlight" rel="noopener noreferrer" target="_blank" href="https://reactjs.org/docs/hooks-reference.html#usecontext">https://reactjs.org/docs/hooks-reference.html#usecontext</a>
+        </p>
+        <p>
+          useReducer() -
+          {' '}
+          <a className="highlight" rel="noopener noreferrer" target="_blank" href="https://reactjs.org/docs/hooks-reference.html#usereducer">https://reactjs.org/docs/hooks-reference.html#usereducer</a>
+        </p>
+        <p>
+          useCallback() -
+          {' '}
+          <a className="highlight" rel="noopener noreferrer" target="_blank" href="https://reactjs.org/docs/hooks-reference.html#usecallback">https://reactjs.org/docs/hooks-reference.html#usecallback</a>
+        </p>
+        <p>
+          useMemo() -
+          {' '}
+          <a className="highlight" rel="noopener noreferrer" target="_blank" href="https://reactjs.org/docs/hooks-reference.html#usememo">https://reactjs.org/docs/hooks-reference.html#usememo</a>
+        </p>
+        <p>
+          useRef() -
+          {' '}
+          <a className="highlight" rel="noopener noreferrer" target="_blank" href="https://reactjs.org/docs/hooks-reference.html#useref">https://reactjs.org/docs/hooks-reference.html#useref</a>
+        </p>
+        <p>
+          useImperativeHandle() -
+          {' '}
+          <a className="highlight" rel="noopener noreferrer" target="_blank" href="https://reactjs.org/docs/hooks-reference.html#useimperativehandle">https://reactjs.org/docs/hooks-reference.html#useimperativehandle</a>
+        </p>
+        <p>
+          useLayoutEffect() -
+          {' '}
+          <a className="highlight" rel="noopener noreferrer" target="_blank" href="https://reactjs.org/docs/hooks-reference.html#uselayouteffect">https://reactjs.org/docs/hooks-reference.html#uselayouteffect</a>
+        </p>
+        <p>
+          useDebugValue() -
+          {' '}
+          <a className="highlight" rel="noopener noreferrer" target="_blank" href="https://reactjs.org/docs/hooks-reference.html#usedebugvalue">https://reactjs.org/docs/hooks-reference.html#usedebugvalue</a>
+        </p>
       </div>
     </div>
     <div className="back-button">

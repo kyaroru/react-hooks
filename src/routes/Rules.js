@@ -38,7 +38,7 @@ const Rules = () => (
           . (Not from regular JavaScript functions)
         </p>
         <p>
-How do I make sure this? Install
+          How do I ensure this? Install
           {' '}
           <a className="highlight" rel="noopener noreferrer" target="_blank" href="https://www.npmjs.com/package/eslint-plugin-react-hooks">eslint-plugin-react-hooks</a>
           {' '}

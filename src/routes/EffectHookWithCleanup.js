@@ -57,7 +57,7 @@ class NormalClassWithCleanUp extends Component {
 }`;
 
 const EffectHookWithCleanUp = () => {
-  const [selected, setSelected] = useState(hook);
+  const [selected, setSelected] = useState(null);
   return (
     <div className="app-content">
       <div className="page">
@@ -66,11 +66,13 @@ const EffectHookWithCleanUp = () => {
           <Effect.HookWithCleanUp onPress={() => setSelected(hook)} />
           <Effect.NormalClassWithCleanUp onPress={() => setSelected(normal)} />
         </div>
-        <div className="card highlight">
-          <Highlight language="javascript">
-            {selected}
-          </Highlight>
-        </div>
+        {selected && (
+          <div className="card highlight">
+            <Highlight language="javascript">
+              {selected}
+            </Highlight>
+          </div>
+        )}
       </div>
       <div className="back-button">
         <Link className="app-link" to="/topic" href="/topic">⬅ Back to Topic</Link>

@@ -12,7 +12,13 @@ const Intro = () => (
       </div>
       <img alt="brownie" className="app-logo" src={brownie} />
       <br />
-      <div className="title">I am Brownie :p</div>
+      <div className="title-small">
+        Hi, I am Brownie from
+        {' '}
+        <a className="highlight" rel="noopener noreferrer" target="_blank" href="http://bearsweeper.kyaroru.com/">BearSweeper</a>
+        {' '}
+        :p
+      </div>
       <Link className="app-link" to="/topic" href="/topic">Start Now !</Link>
     </div>
     <div className="copyright">

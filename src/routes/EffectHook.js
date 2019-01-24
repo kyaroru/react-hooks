@@ -58,7 +58,7 @@ class NormalClass extends Component {
 }`;
 
 const EffectHook = () => {
-  const [selected, setSelected] = useState(hook);
+  const [selected, setSelected] = useState(null);
   return (
     <div className="app-content">
       <div className="page">
@@ -67,11 +67,13 @@ const EffectHook = () => {
           <Effect.Hook onPress={() => setSelected(hook)} />
           <Effect.NormalClass onPress={() => setSelected(normal)} />
         </div>
-        <div className="card highlight">
-          <Highlight language="javascript">
-            {selected}
-          </Highlight>
-        </div>
+        {selected && (
+          <div className="card highlight">
+            <Highlight language="javascript">
+              {selected}
+            </Highlight>
+          </div>
+        )}
       </div>
       <div className="back-button">
         <Link className="app-link" to="/topic" href="/topic">⬅ Back to Topic</Link>

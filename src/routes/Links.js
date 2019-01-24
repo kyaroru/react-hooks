@@ -7,7 +7,11 @@ const Links = () => (
   <div className="app-content">
     <div className="page">
       <div className="title topic">Links for Reference</div>
-
+      <div className="hyperlink">
+        React Official Website
+        {' - '}
+        <a className="highlight" rel="noopener noreferrer" target="_blank" href="https://reactjs.org/docs/hooks-intro.html">Introducing Hooks</a>
+      </div>
       <div className="hyperlink">
         Dan Abramov
         {' - '}
