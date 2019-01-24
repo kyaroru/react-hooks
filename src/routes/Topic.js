@@ -13,6 +13,7 @@ const Topic = () => (
         <Link className="app-link" to="/additional" href="/additional">Additional Hooks</Link>
         <Link className="app-link" to="/rules" href="/rules">Rules of Hook</Link>
         <Link className="app-link" to="/byoh" href="/rules">Build Your Own Hooks</Link>
+        <Link className="app-link" to="/links" href="/links">Links for Reference</Link>
       </div>
     </div>
     <div className="back-button">

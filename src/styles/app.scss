@@ -42,6 +42,7 @@ code {
     flex-direction: column;
     flex: 1;
     overflow: hidden;
+    margin: 60px 0;
   }
 }
 
@@ -153,15 +154,19 @@ code {
   color: #fdfd96;
 }
 
+.hyperlink {
+  margin-top: 20px;
+}
+
 .footer {
   .prev-button {
-    position: absolute;
+    position: fixed;
     bottom: 30px;
     left: 20px;
   }
 
   .next-button {
-    position: absolute;
+    position: fixed;
     bottom: 30px;
     right: 20px;
   }

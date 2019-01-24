@@ -44,33 +44,20 @@ class NormalClass extends Component {
 `;
 
 const StateHook = () => {
-  const [selected, setSelected] = useState('hook');
+  const [selected, setSelected] = useState(hook);
   return (
     <div className="app-content">
       <div className="page">
         <div className="title topic">State Hook</div>
         <div className="row">
-          <State.Hook onPress={() => setSelected('hook')} />
-          <State.NormalClass onPress={() => setSelected('normal')} />
+          <State.Hook onPress={() => setSelected(hook)} />
+          <State.NormalClass onPress={() => setSelected(normal)} />
         </div>
-        {selected === 'hook'
-          && (
-            <div className="card highlight">
-              <Highlight language="javascript">
-                {hook}
-              </Highlight>
-            </div>
-          )
-        }
-        {selected === 'normal'
-          && (
-            <div className="card highlight">
-              <Highlight language="javascript">
-                {normal}
-              </Highlight>
-            </div>
-          )
-        }
+        <div className="card highlight">
+          <Highlight language="javascript">
+            {selected}
+          </Highlight>
+        </div>
       </div>
 
       <div className="back-button">

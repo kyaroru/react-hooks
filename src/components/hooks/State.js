@@ -34,11 +34,11 @@ const Hook = ({ onPress }) => { // eslint-disable-line
     <div className="card" onClick={onPress}>
       <h1>State Hook</h1>
       <p>
-You clicked
+        You clicked
         {' '}
         {count}
         {' '}
-times
+        times
       </p>
       <div role="button" className="app-button" onClick={() => setCount(count + 1)}>
         Click me

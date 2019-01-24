@@ -17,9 +17,12 @@ class NormalClass extends Component { // eslint-disable-line
 
   render() {
     const { count } = this.state;
+    const { onPress } = this.props; // eslint-disable-line
     return (
       <div className="card">
-        <h1>Normal Class</h1>
+        <div onClick={onPress}>
+          <h1>Normal Class</h1>
+        </div>
         <p>
           You clicked
           {' '}
@@ -27,7 +30,7 @@ class NormalClass extends Component { // eslint-disable-line
           {' '}
           times
         </p>
-        <div role="button" className="app-button" onClick={() => this.setState({ count: count + 1 })}>
+        <div className="app-button" onClick={() => this.setState({ count: count + 1 })}>
           Click me
         </div>
       </div>
@@ -35,10 +38,10 @@ class NormalClass extends Component { // eslint-disable-line
   }
 }
 
-const Hook = () => {
+const Hook = ({ onPress }) => { // eslint-disable-line
   const [count, setCount] = useState(0); // 0 is default value
 
-  // Similar to componentDidMount and componentDidUpdate:
+  // Similar to componentDidMount() and componentDidUpdate()
   useEffect(() => {
     // Update the document title using the browser API
     document.title = `You clicked ${count} times (Hook)`;
@@ -46,15 +49,17 @@ const Hook = () => {
 
   return (
     <div className="card">
-      <h1>Effect Hook</h1>
+      <div onClick={onPress}>
+        <h1>Effect Hook</h1>
+      </div>
       <p>
-You clicked
+        You clicked
         {' '}
         {count}
         {' '}
-times
+        times
       </p>
-      <div role="button" className="app-button" onClick={() => setCount(count + 1)}>
+      <div className="app-button" onClick={() => setCount(count + 1)}>
         Click me
       </div>
     </div>
@@ -76,18 +81,17 @@ class NormalClassWithCleanUp extends Component { // eslint-disable-line
     window.removeEventListener('resize', this.handleWindowResize);
   }
 
-  handleWindowResize = (event) => {
-    this.setState({ width: event.currentTarget.innerWidth });
-  };
+  handleWindowResize = () => this.setState({ width: window.innerWidth });
 
   render() {
     const { width } = this.state;
+    const { onPress } = this.props; // eslint-disable-line
     return (
-      <div className="card">
+      <div className="card" onClick={onPress}>
         <h1>Normal Class</h1>
         <h3>(With Clean Up)</h3>
         <p>
-Current Window Width:
+          Current Window Width:
           {' '}
           {width}
         </p>
@@ -96,13 +100,11 @@ Current Window Width:
   }
 }
 
-const HookWithCleanUp = () => {
+const HookWithCleanUp = ({ onPress }) => { // eslint-disable-line
   const [width, setWidth] = useState(window.innerWidth);
-  // Similar to componentDidMount and componentDidUpdate:
-  const handleWindowResize = (event) => {
-    setWidth(event.currentTarget.innerWidth);
-  };
+  // Similar to componentDidMount() and componentDidUpdate()
   useEffect(() => {
+    const handleWindowResize = () => setWidth(window.innerWidth);
     // listen to window resize
     window.addEventListener('resize', handleWindowResize);
     return () => {
@@ -111,11 +113,11 @@ const HookWithCleanUp = () => {
   });
 
   return (
-    <div className="card">
+    <div className="card" onClick={onPress}>
       <h1>Effect Hook</h1>
       <h3>(With Clean Up)</h3>
       <p>
-Current Window Width:
+        Current Window Width:
         {' '}
         {width}
       </p>
