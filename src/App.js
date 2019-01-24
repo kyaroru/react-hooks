@@ -1,26 +1,31 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { HashRouter as Router, Route } from 'react-router-dom';
+import Intro from './routes/Intro';
+import Topic from './routes/Topic';
+import What from './routes/What';
+import Why from './routes/Why';
+import StateHook from './routes/StateHook';
+import EffectHook from './routes/EffectHook';
+import Additional from './routes/Additional';
+import Rules from './routes/Rules';
+import BYOH from './routes/BYOH';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <Router>
+        <div className="app">
+          <Route path="/" exact component={Intro} />
+          <Route path="/topic" component={Topic} />
+          <Route path="/what" component={What} />
+          <Route path="/why" component={Why} />
+          <Route path="/state" component={StateHook} />
+          <Route path="/effect" component={EffectHook} />
+          <Route path="/additional" component={Additional} />
+          <Route path="/rules" component={Rules} />
+          <Route path="/byoh" component={BYOH} />
+        </div>
+      </Router>
     );
   }
 }
