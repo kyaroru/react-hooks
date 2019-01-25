@@ -35,7 +35,7 @@ const CustomHook = () => {
   );
 };`;
 
-const BYOH = () => (
+const BYOH = ({ history }) => (
   <div className="app-content">
     <div className="page">
       <div className="title topic">Build your own Hooks</div>
@@ -51,7 +51,7 @@ const BYOH = () => (
     <div className="back-button">
       <Link className="app-link" to="/topic" href="/topic">⬅ Back to Topic</Link>
     </div>
-    <FooterNavBar prev="/rules" next="/links" />
+    <FooterNavBar prev="/rules" next="/links" history={history} />
   </div>
 );
 

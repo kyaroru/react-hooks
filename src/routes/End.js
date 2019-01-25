@@ -1,40 +1,36 @@
 import React, { PureComponent } from 'react';
 import { Link } from 'react-router-dom';
 import { hotkeys } from 'react-keyboard-shortcuts';
+import FooterNavBar from '../components/FooterNavBar';
 import brownie from '../images/Brownie.svg';
 
-class Intro extends PureComponent {
+class End extends PureComponent {
   hot_keys = { // eslint-disable-line
     space: {
       priority: 1,
       handler: () => {
         const { history } = this.props;
         if (history) {
-          history.push('/topic');
+          history.replace('/');
         }
       },
     },
   }
 
   render() {
+    const { history } = this.props;
     return (
       <div className="app-content">
         <div className="page">
           <div className="main-title">
-            Introduction to
-            {' '}
-            <a className="topic" rel="noopener noreferrer" target="_blank" href="https://reactjs.org/docs/hooks-intro.html">React Hooks</a>
+            Thank for your time!
           </div>
           <img alt="brownie" className="app-logo" src={brownie} />
           <br />
           <div className="title-small">
-            Hi, I am Brownie from
-            {' '}
-            <a className="highlight" rel="noopener noreferrer" target="_blank" href="http://bearsweeper.kyaroru.com/">BearSweeper</a>
-            {' '}
-            :p
+            Please come again :p
           </div>
-          <Link className="app-link" to="/topic" href="/topic">Press Spacebar to Start :p</Link>
+          <Link className="app-link" to="/" href="/">Press Spacebar to Back to Home :p</Link>
         </div>
         <div className="copyright">
           ©
@@ -48,4 +44,4 @@ class Intro extends PureComponent {
   }
 }
 
-export default hotkeys(Intro);
+export default hotkeys(End);

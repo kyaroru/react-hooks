@@ -56,7 +56,7 @@ class NormalClassWithCleanUp extends Component {
   }
 }`;
 
-const EffectHookWithCleanUp = () => {
+const EffectHookWithCleanUp = ({ history }) => {
   const [selected, setSelected] = useState(null);
   return (
     <div className="app-content">
@@ -77,7 +77,7 @@ const EffectHookWithCleanUp = () => {
       <div className="back-button">
         <Link className="app-link" to="/topic" href="/topic">⬅ Back to Topic</Link>
       </div>
-      <FooterNavBar prev="/effect" next="/additional" />
+      <FooterNavBar prev="/effect" next="/additional" history={history} />
     </div>
   );
 };

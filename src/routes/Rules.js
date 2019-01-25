@@ -20,7 +20,7 @@ const code = `
 }
 `;
 
-const Rules = () => (
+const Rules = ({ history }) => (
   <div className="app-content">
     <div className="page">
       <div className="title topic">Rules of Hooks</div>
@@ -55,7 +55,7 @@ const Rules = () => (
     <div className="back-button">
       <Link className="app-link" to="/topic" href="/topic">⬅ Back to Topic</Link>
     </div>
-    <FooterNavBar prev="/additional" next="/byoh" />
+    <FooterNavBar prev="/additional" next="/byoh" history={history} />
   </div>
 );
 

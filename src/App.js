@@ -11,6 +11,7 @@ import Additional from './routes/Additional';
 import Rules from './routes/Rules';
 import BYOH from './routes/BYOH';
 import Links from './routes/Links';
+import End from './routes/End';
 
 const App = () => (
   <Router>
@@ -26,6 +27,7 @@ const App = () => (
       <Route path="/rules" component={Rules} />
       <Route path="/byoh" component={BYOH} />
       <Route path="/links" component={Links} />
+      <Route path="/end" component={End} />
     </div>
   </Router>
 );

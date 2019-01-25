@@ -57,7 +57,7 @@ class NormalClass extends Component {
   }
 }`;
 
-const EffectHook = () => {
+const EffectHook = ({ history }) => {
   const [selected, setSelected] = useState(null);
   return (
     <div className="app-content">
@@ -78,7 +78,7 @@ const EffectHook = () => {
       <div className="back-button">
         <Link className="app-link" to="/topic" href="/topic">⬅ Back to Topic</Link>
       </div>
-      <FooterNavBar prev="/state" next="/effect-cleanup" />
+      <FooterNavBar prev="/state" next="/effect-cleanup" history={history} />
     </div>
   );
 };

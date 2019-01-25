@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import FooterNavBar from '../components/FooterNavBar';
 
-const What = () => (
+const What = ({ history }) => (
   <div className="app-content">
     <div className="page">
       <div className="title topic">What is Hooks?</div>
@@ -24,7 +24,7 @@ const What = () => (
         <Link className="app-link" to="/topic" href="/topic">⬅ Back to Topic</Link>
       </div>
     </div>
-    <FooterNavBar next="/why" />
+    <FooterNavBar next="/why" history={history} />
   </div>
 );
 
