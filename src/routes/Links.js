@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import FooterNavBar from '../components/FooterNavBar';
 
 const Links = ({ history }) => (
@@ -35,5 +36,9 @@ const Links = ({ history }) => (
     <FooterNavBar prev="/byoh" next="/end" history={history} />
   </div>
 );
+
+Links.propTypes = {
+  history: PropTypes.object.isRequired,
+};
 
 export default Links;

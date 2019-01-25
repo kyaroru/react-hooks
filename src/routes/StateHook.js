@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import Highlight from 'react-highlight.js';
 import State from '../components/hooks/State';
 import FooterNavBar from '../components/FooterNavBar';
@@ -68,6 +69,10 @@ const StateHook = ({ history }) => {
       <FooterNavBar prev="/why" next="/effect" history={history} />
     </div>
   );
+};
+
+StateHook.propTypes = {
+  history: PropTypes.object.isRequired,
 };
 
 export default StateHook;

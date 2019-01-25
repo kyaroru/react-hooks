@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import FooterNavBar from '../components/FooterNavBar';
 
 const Additional = ({ history }) => (
@@ -55,5 +56,9 @@ const Additional = ({ history }) => (
     <FooterNavBar prev="/effect" next="/rules" history={history} />
   </div>
 );
+
+Additional.propTypes = {
+  history: PropTypes.object.isRequired,
+};
 
 export default Additional;

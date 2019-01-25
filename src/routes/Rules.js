@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import Highlight from 'react-highlight.js';
 import FooterNavBar from '../components/FooterNavBar';
 
@@ -58,5 +59,9 @@ const Rules = ({ history }) => (
     <FooterNavBar prev="/additional" next="/byoh" history={history} />
   </div>
 );
+
+Rules.propTypes = {
+  history: PropTypes.object.isRequired,
+};
 
 export default Rules;

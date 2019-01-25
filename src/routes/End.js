@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import { hotkeys } from 'react-keyboard-shortcuts';
-import FooterNavBar from '../components/FooterNavBar';
 import brownie from '../images/Brownie.svg';
 
 class End extends PureComponent {
@@ -43,5 +43,9 @@ class End extends PureComponent {
     );
   }
 }
+
+End.propTypes = {
+  history: PropTypes.object.isRequired,
+};
 
 export default hotkeys(End);

@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { hotkeys } from 'react-keyboard-shortcuts';
 import brownie from '../images/Brownie.svg';
@@ -47,5 +48,9 @@ class Intro extends PureComponent {
     );
   }
 }
+
+Intro.propTypes = {
+  history: PropTypes.object.isRequired,
+};
 
 export default hotkeys(Intro);

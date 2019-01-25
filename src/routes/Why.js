@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import FooterNavBar from '../components/FooterNavBar';
 
@@ -40,5 +41,9 @@ const Why = ({ history }) => (
     <FooterNavBar prev="/what" next="/state" history={history} />
   </div>
 );
+
+Why.propTypes = {
+  history: PropTypes.object.isRequired,
+};
 
 export default Why;

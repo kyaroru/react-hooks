@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import Highlight from 'react-highlight.js';
 import Effect from '../components/hooks/Effect';
@@ -81,6 +82,10 @@ const EffectHook = ({ history }) => {
       <FooterNavBar prev="/state" next="/effect-cleanup" history={history} />
     </div>
   );
+};
+
+EffectHook.propTypes = {
+  history: PropTypes.object.isRequired,
 };
 
 export default EffectHook;

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import Highlight from 'react-highlight.js';
 import FooterNavBar from '../components/FooterNavBar';
 import CustomHook from '../components/hooks/Custom';
@@ -54,5 +55,9 @@ const BYOH = ({ history }) => (
     <FooterNavBar prev="/rules" next="/links" history={history} />
   </div>
 );
+
+BYOH.propTypes = {
+  history: PropTypes.object.isRequired,
+};
 
 export default BYOH;
