@@ -42,7 +42,7 @@ class Topic extends PureComponent {
           </div>
         </div>
         <div className="back-button">
-          <Link className="app-link" to="/" href="/">⬅ Back to Main</Link>
+          <Link className="app-link" to="/" href="/">⬅ Back to Home</Link>
         </div>
       </div>
     );

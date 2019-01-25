@@ -18,12 +18,11 @@ class End extends PureComponent {
   }
 
   render() {
-    const { history } = this.props;
     return (
       <div className="app-content">
         <div className="page">
           <div className="main-title">
-            Thank for your time!
+            Thanks for your precious time!
           </div>
           <img alt="brownie" className="app-logo" src={brownie} />
           <br />
